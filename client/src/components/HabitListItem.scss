@@ -1,0 +1,12 @@
+$primary: pink;
+$secondary: seagreen;
+
+.habit {
+  border: 2px dotted $primary;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.habit-title {
+  color: $secondary;
+}
