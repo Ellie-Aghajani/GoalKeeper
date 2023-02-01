@@ -1,9 +1,14 @@
-$primary: pink;
-$secondary: seagreen;
+$primary: rgb(97, 55, 176);
+$secondary: rgb(223, 119, 14);
 
 .habit {
-  border: 2px dotted $primary;
+  width: 15rem;
+  height: 15rem;
+  border: 2px solid $primary;
+  background-color: rgb(50, 23, 50);
+  color: rgb(255, 208, 0);
   padding: 10px;
+  margin: 5rem;
   border-radius: 15px;
 }
 
