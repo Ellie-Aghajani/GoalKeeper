@@ -33,12 +33,22 @@ app.use(express.static('../client/build'));
 // routes
 
 // GET /habits
-app.get('/habits', (req, res) => {
+app.get('/', (req, res) => {
+  res.send("homepage");
+});
+
+
+app.get('/signin', (req, res) => {
+  res.send("sign in");
+});
+
+
+app.get('/dashboard', (req, res) => {
   res.json(habits);
 });
 
 // POST /habits
-app.post('/habits', (req, res) => {
+app.post('/dashboard', (req, res) => {
  
   const id = Math.random().toString(36).substring(2, 5);
   const name = req.body.name;
@@ -62,20 +72,20 @@ app.post('/habits', (req, res) => {
 });
 
 // PATCH /habits/:id
-app.patch('/habits/:id', (req, res) => {
-  const id = req.params.id;
+// app.patch('/habits/:id', (req, res) => {
+//   const id = req.params.id;
 
   // find the appropriate todo
-  const foundHabit = habits.find((habit) => habit.id === id);
+//   const foundHabit = habits.find((habit) => habit.id === id);
 
-  console.log(foundHabit);
+//   console.log(foundHabit);
 
-  // foundTodo.completed = true;
-  foundHabit.completed = !foundHabit.completed;
+//   // foundTodo.completed = true;
+//   foundHabit.completed = !foundHabit.completed;
 
-  res.status(204).send();
-});
+//   res.status(204).send();
+// });
 
 app.listen(port, () => {
-  console.log(`app is listening on port ${port}`);
+  console.log(`app is listening on port ${port} `);
 });
