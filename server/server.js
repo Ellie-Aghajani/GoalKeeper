@@ -71,21 +71,6 @@ app.post('/dashboard', (req, res) => {
   res.json(newHabit);
 });
 
-// PATCH /habits/:id
-// app.patch('/habits/:id', (req, res) => {
-//   const id = req.params.id;
-
-  // find the appropriate todo
-//   const foundHabit = habits.find((habit) => habit.id === id);
-
-//   console.log(foundHabit);
-
-//   // foundTodo.completed = true;
-//   foundHabit.completed = !foundHabit.completed;
-
-//   res.status(204).send();
-// });
-
 app.listen(port, () => {
   console.log(`app is listening on port ${port} `);
 });
