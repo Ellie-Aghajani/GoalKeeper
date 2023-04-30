@@ -1,2 +1,3 @@
 # GoalKeeper
-This is a react app
+This is a react single page application.
+
